@@ -15,36 +15,38 @@
 
   .login-box {
     background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 40px; /* bigger padding */
+    border-radius: 12px; /* slightly larger corners */
+    box-shadow: 0 0 15px rgba(0,0,0,0.25);
     width: 100%;
-    max-width: 350px; /* keeps it compact on phones */
+    max-width: 420px; /* larger box on mobile */
     box-sizing: border-box;
+    font-size: 18px; /* bigger text inside */
   }
 
   button {
     background-color: #72A38A;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 16px 24px; /* bigger button */
     cursor: pointer;
-    border-radius: 5px;
-    width: 100%; /* full width button on mobile */
-    font-size: 16px;
+    border-radius: 8px;
+    width: 100%; /* full width for easy tapping */
+    font-size: 18px; /* larger text */
   }
 
   /* Responsive tweaks */
   @media (max-width: 480px) {
     body {
-      padding: 10px;
+      padding: 15px;
     }
     .login-box {
-      padding: 20px;
+      padding: 30px;
+      font-size: 16px;
     }
     button {
-      font-size: 14px;
-      padding: 10px;
+      font-size: 16px;
+      padding: 14px;
     }
   }
 </style>
@@ -61,5 +63,6 @@
   <script src="javascript.js"></script>
 </body>
 </html>
+
 
 
