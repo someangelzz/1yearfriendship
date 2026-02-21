@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cute Images</title>
+  <style>
+    body {
+      background-color: #9fe2bf; 
+      font-family: 'Times New Roman', sans-serif;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h2 {
+      font-family: 'Times New roman', cursive;
+      font-size: 48px;
+      color: #fff;
+      margin-top: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 30px;
+    }
+
+    .polaroid {
+      background: #fff;
+      padding: 10px;
+      width: 200px;
+      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+      transform: rotate(-3deg);
+      transition: transform 0.3s ease;
+    }
+
+    .polaroid:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+
+    .polaroid img {
+      width: 100%;
+      border-bottom: 20px solid #fff;
+    }
+
+    .flower {
+      position: fixed;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background-image: url('flower.png'); 
+      background-size: cover;
+      animation: fall linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0.7; }
+    }
+  </style>
+</head>
+<body>
+  <h2>thank you Xochitl</h2>
+
+  <div class="gallery">
+    <!-- images -->
+    <div class="polaroid"><img src="cute1.jpg" alt="Cute Image 1"></div>
+    <div class="polaroid"><img src="cute2.jpg" alt="Cute Image 2"></div>
+    <div class="polaroid"><img src="cute3.jpg" alt="Cute Image 3"></div>
+  </div>
+
+  <script>
+    function createFlower() {
+      const flower = document.createElement("div");
+      flower.classList.add("flower");
+      flower.style.left = Math.random() * window.innerWidth + "px";
+      flower.style.animationDuration = (5 + Math.random() * 5) + "s"; 
+      document.body.appendChild(flower);
+
+      setTimeout(() => { flower.remove(); }, 10000);
+    }
+
+    setInterval(createFlower, 500);
+  </script>
+</body>
+</html>

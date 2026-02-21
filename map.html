@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Map Box</title>
+  <style>
+    body { background-color: #9fe2bf; font-family: Times New Roman; text-align: center; }
+    #message { display: none; margin: 20px auto; padding: 20px; background: #fff; width: 400px; border-radius: 8px; }
+    button { margin-top: 20px; background-color: #6B8E23; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    h2 {
+      font-family: 'Times New roman', cursive;
+      font-size: 40px;
+      color: #fff;
+      margin-top: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Click on the happy snowman</h2>
+  <img src="box.png" alt="Box" usemap="#boxmap" width="300" height="300">
+  <map name="boxmap">
+    <area shape="rect" coords="0,0,300,300" href="#" onclick="showMessage(); return false;">
+  </map>
+
+  <div id="message">
+    💌 my one and only rui,<br><br>
+    thank you for this wonderful year that you spent with me you mean the world to me, youve been always by my side and i really want to always be by your side, youre someone amazing, loving and funny. youve been always here for me through everything. i want to be by your side forever <3 thank you for being my best friend.. for being someone so loving and adorable. By the end, i want to tell you, I love you more than words can express. I wish i could hug you so tightly and have you forever >,<  <br><br>With love,  
+    — 7357
+    <br><br>
+    <button onclick="window.location.href='song.html'">Songs that remind me of you</button>
+  </div>
+  <script>
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
