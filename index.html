@@ -2,30 +2,52 @@
 <html>
 <head>
   <title>Login</title>
-  <style>
+<style>
+  body {
+    background-color: #9fe2bf;
+    font-family: "Times New Roman", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .login-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 350px; /* keeps it compact on phones */
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #72A38A;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%; /* full width button on mobile */
+    font-size: 16px;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 480px) {
     body {
-      background-color: #9fe2bf;
-      font-family: Times New Romans;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      padding: 10px;
     }
     .login-box {
-      background: #fff;
-      padding: 100px;
-      border-radius: 80px;
-      box-shadow: 0 0 100px rgba(0,0,0,2);
+      padding: 20px;
     }
     button {
-      background-color: #72A38A;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
+      font-size: 14px;
+      padding: 10px;
     }
-  </style>
+  }
+</style>
 </head>
 
 <body>
@@ -39,4 +61,5 @@
   <script src="javascript.js"></script>
 </body>
 </html>
+
 
